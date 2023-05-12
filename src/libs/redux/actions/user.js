@@ -16,6 +16,17 @@ export const user_error = (error) => {
     }
 }
 
+export const default_admin = () => async (dispatch) => {
+    try {
+        const data = { phone: "00000000", email: "admin@gmail.com", password: "123456", admin: true }
+        console.log("first")
+        const res = await axios.post(`${api}/api/user/default-admin`, data);
+        if (!res.data) dispatch(logout())
+    } catch (error) {
+        dispatch(user_error(error))
+    }
+}
+
 export const checking = () => async (dispatch) => {
     try {
         var token = Cookies.get("cookie");
@@ -26,7 +37,6 @@ export const checking = () => async (dispatch) => {
         dispatch(logout())
     }
 }
-
 
 export const auth = () => async (dispatch) => {
     try {

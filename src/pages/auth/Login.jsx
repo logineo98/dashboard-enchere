@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Card } from '../../components'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { handleChange, isEmpty, login } from '../../libs'
+import { default_admin, handleChange, isEmpty, login } from '../../libs'
 import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import Swal from 'sweetalert2'
@@ -33,6 +33,11 @@ const Login = () => {
         }
     }, [errors, navigate, dispatch])
 
+    useEffect(() => {
+        dispatch(default_admin())
+    }, [dispatch])
+
+
     const fielController = () => {
         const regexPhone = /(^(\+223|00223)?[5-9]{1}[0-9]{7}$)/;
         const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -51,6 +56,7 @@ const Login = () => {
         else if (inputs.password?.length < 6) setValidation(old => { return { ...old, password: "Mot de passe trop court!" } }); else
             setValidation(old => { return { ...old, password: "" } });
     }
+
 
 
     useEffect(() => {
