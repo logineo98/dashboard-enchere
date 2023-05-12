@@ -1,0 +1,312 @@
+//pagetableheader
+.table-header {
+  @include df_aic_jcsb;
+  flex-wrap: wrap;
+  margin: 15px 0;
+  transition: all 1s ease;
+
+  .table-header-left {
+    .table-header-left-actions {
+      @include df_aic_jcc;
+      gap: 5px;
+
+      select {
+        padding: 5px 10px;
+        outline: none;
+      }
+
+      button {
+        padding: 5px 10px;
+        @include df_aic_jcc;
+        border-radius: 0;
+        background: $main;
+        border: 1px solid $main;
+        outline: none;
+        color: white;
+
+        i {
+          margin-right: 1px;
+        }
+      }
+    }
+  }
+
+  .table-header-right {
+    border: 1px solid #000;
+    background: #fff;
+    @include df_aic_jcc;
+    width: 200px;
+
+    i {
+      padding: 0 10px;
+    }
+
+    input {
+      padding: 5px 0;
+      border: none;
+      outline: none;
+      width: 160px;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    flex-wrap: wrap-reverse;
+    transition: all 1s ease;
+
+    .table-header-left {
+      .table-header-left-actions {
+        select {
+          padding: 5px 0px;
+          outline: none;
+        }
+
+        button {
+          padding: 5px 2px;
+          @include df_aic_jcc;
+          border-radius: 0;
+          background: $main;
+          border: 1px solid $main;
+          outline: none;
+          color: white;
+        }
+      }
+    }
+
+    .table-header-right {
+      input {
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    @include dfc_aic_jcc;
+    margin: 15px 0;
+    width: 100%;
+    gap: 5px;
+    transition: all 1s ease;
+
+    .table-header-left {
+      width: 100%;
+
+      .table-header-left-actions {
+        width: 100%;
+
+        select {
+          padding: 5px 10px;
+          outline: none;
+          width: 75%;
+        }
+
+        button {
+          padding: 5px 2px;
+          @include df_aic_jcc;
+          border-radius: 0;
+          background: $main;
+          border: 1px solid $main;
+          outline: none;
+          color: white;
+          width: 25%;
+        }
+      }
+    }
+
+    .table-header-right {
+      width: 100%;
+
+      input {
+        padding: 5px 0;
+        border: none;
+        outline: none;
+        width: 130px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+//page-tabs
+.page-tabs {
+  @include df_aic_jcfs;
+  gap: 3px;
+  font-size: 14px;
+  margin: 2px 0;
+  flex-wrap: wrap;
+
+  .page-tabs-items {
+    @include df_aic_jcfs;
+    gap: 3px;
+
+    .label {
+      letter-spacing: 1px;
+      text-transform: lowercase;
+    }
+
+    .bar {
+      font-size: 10px;
+    }
+  }
+}
+
+//page-title
+.page-title {
+  @include df_aic_jcsb;
+  padding: 15px 0 50px 0;
+  flex-wrap: wrap-reverse;
+
+  .title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      width: 50%;
+      height: 4px;
+
+      background: $main;
+    }
+  }
+
+  .page-title-buttons {
+    @include df_aic_jcsb;
+    gap: 5px;
+
+    .main-btn.link {
+      padding: 2px 15px;
+      background: $main;
+      border: none;
+      outline: none;
+      color: white;
+    }
+
+    button {
+      padding: 5px 15px;
+
+      &.main-btn,
+      .main-btn.link {
+        background: $main;
+        border: none;
+        outline: none;
+        color: white;
+      }
+
+      &.last-btn {
+        background: $side-color;
+        border: none;
+        outline: none;
+        color: white;
+      }
+    }
+
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+      @include df_aic_jcfe;
+      margin: 10px 0;
+    }
+  }
+}
+
+//breadcrumb
+.breadcrumb {
+  font-size: 12px;
+  @include df_aic_jcsb;
+  gap: 5px;
+
+  .breadcrumb-title {
+    @include df_aic_jcc;
+    gap: 5px;
+
+    .breadcrumb-title-logo-container {
+      width: 40px;
+      height: 40px;
+      background: $badge-color;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .breadcrumb-title-label {
+      font-size: 24px;
+    }
+  }
+
+  .breadcrumb-link {
+    i {
+      font-size: 10px;
+    }
+  }
+}
+
+// loading
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: $side-color;
+  position: relative;
+
+  .loader {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 0px solid $side-color;
+    border-radius: 50%;
+
+    &:nth-child(1) {
+      border-bottom-width: 8px;
+      border-color: rgb(255, 0, 255);
+      animation: rotate1 2s linear infinite;
+    }
+
+    &:nth-child(2) {
+      border-right-width: 8px;
+      border-color: rgb(0, 247, 255);
+      animation: rotate3 2s linear infinite;
+    }
+
+    &:nth-child(3) {
+      border-top-width: 8px;
+      border-color: rgb(0, 255, 13);
+      animation: rotate2 2s linear infinite;
+    }
+  }
+
+  .loading-label {
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}

@@ -1,0 +1,116 @@
+.navbar {
+  height: 70px;
+  @include df_aic_jcsb;
+  background: #fff;
+  position: fixed;
+  left: 250px;
+  width: calc(100% - 250px);
+  top: 0;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 11px rgba(0, 0, 0, 0.12);
+
+  .navbar-left-items {
+    @include df_aic_jcsb;
+
+    .menu-toggle {
+      label {
+        height: 35px;
+        width: 35px;
+        padding: 5px;
+        border-radius: 50%;
+        border: 1px solid #262626;
+        @include df_aic_jcc;
+
+        i {
+          font-size: 22px;
+        }
+
+        &:hover {
+          border: 1px solid tomato;
+
+          i {
+            color: tomato;
+          }
+        }
+      }
+    }
+
+    .navbar-menus {
+      @include df_aic_jcsb;
+      margin: 0 15px;
+      gap: 10px;
+
+      .navbar-menus-item {
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-size: 18px;
+        font-weight: 200;
+      }
+    }
+  }
+
+  .navbar-right-items {
+    @include df_aic_jcsb;
+
+    .navbar-menus {
+      @include df_aic_jcsb;
+
+      i {
+        margin: 0 10px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+
+    .navbar-profile-panel {
+      margin-left: 15px;
+      @include df_aic_jcc;
+      position: relative;
+
+      img {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+      }
+
+      &:hover .navigation-profile-card {
+        max-height: 256px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .navigation-profile-card {
+        background: #ffffff;
+        position: absolute;
+        top: 100%;
+        width: 250px;
+        right: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-height: 0;
+        transition: max-height 0.5s;
+        overflow: hidden;
+        border-radius: 2px;
+        color: $input-color;
+
+        li {
+          padding: 7px 0;
+          padding-left: 20px;
+          cursor: pointer;
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          &:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: #111111;
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

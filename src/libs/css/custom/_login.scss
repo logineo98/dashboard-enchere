@@ -1,0 +1,109 @@
+.login-container {
+    background: $body-color;
+    width: 100vw;
+    height: 100vh;
+    @include df_aic_jcc;
+
+
+    .login-box {
+        width: 50%;
+        // padding: 20px;
+
+        .login-text {
+            padding: 20px;
+            background: $main;
+            width: 100%;
+            @include dfc_aic_jcc;
+
+            .login-img-container {
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                background: #fff;
+                @include df_aic_jcc;
+
+                img {
+                    width: 115px;
+                    height: 115px;
+                    border-radius: 50%;
+                    object-fit: contain;
+                   
+                }
+            }
+
+            .title {
+                font-size: 24px;
+                text-align: center;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            span {
+                text-align: center;
+                color: white
+            }
+        }
+
+        .login-items {
+            @include dfc_aic_jcc;
+
+            .login-item {
+                @include dfc_aic_jcc;
+                width: 100%;
+                padding: 10px 0;
+
+                label {
+                    width: 100%;
+                    font-size: 16px;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 8px 5px;
+                    outline: none;
+                    border-radius: 5px;
+                    border: 1px solid rgba(0, 0, 0, 0.3);
+                }
+
+                small {
+                    font-size: 12px;
+                    text-align: right;
+                    width: 100%;
+                    color: red;
+                    padding-right: 5px;
+                }
+            }
+
+            .button-box {
+                width: 100%;
+
+                button {
+                    @include df_aic_jcfe;
+                    padding: 8px 15px;
+                    border: none;
+                    border-radius: 5px;
+                    outline: none;
+                    background: $main;
+                    color: white;
+
+                    &:hover {
+                        transform: translateY(1px);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width:800px) {
+        .login-box {
+            width: 90%;
+        }
+    }
+
+    @media only screen and (max-width:$mobile) {
+        .login-box {
+            width: 100%;
+        }
+    }
+}

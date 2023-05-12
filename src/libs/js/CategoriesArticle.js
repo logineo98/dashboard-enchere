@@ -1,0 +1,21 @@
+export const CategoriesArticle = [
+    { value: "Collection", label: "Collection" },
+    { value: "Véhicule", label: "Véhicule" },
+    { value: "Immobilier", label: "Immobilier" },
+    { value: "Électronique", label: "Électronique" },
+    { value: "Loisir", label: "Loisir" },
+    { value: "Bijou", label: "Bijou" },
+    { value: "Vêtement", label: "Vêtement" },
+    { value: "Jeux", label: "Jeux" },
+    { value: "Sport", label: "Sport" },
+    { value: "Cosmétique", label: "Cosmétique" },
+    { value: "Industrie", label: "Industrie" },
+    { value: "Électroménagers", label: "Électroménagers" },
+    { value: "Médical", label: "Médical" },
+    { value: "Alimentaires", label: "Alimentaires" },
+    { value: "Animal", label: "Animal" },
+    { value: "Livre", label: "Livre" },
+    { value: "Antiquité", label: "Antiquité" },
+    { value: "Scientifique", label: "Scientifique" },
+    { value: "Jardinage", label: "Jardinage" }
+]

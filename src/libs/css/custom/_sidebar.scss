@@ -1,0 +1,121 @@
+.sidebar {
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: $side-color;
+    color: white;
+
+    .sidebar-brand {
+        height: 70px;
+        width: 100%;
+        background: $main;
+        margin: 0;
+        @include df_aic_jcsb;
+        padding: 0 20px;
+
+        i {
+            font-size: 35px;
+        }
+
+        .sidebar-logo{
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        span {
+            font-size: 20px;
+        }
+    }
+
+    .sidebar-main {
+        color: $white;
+        height: calc(100vh - 70px);
+        font-size: 16px;
+
+        .menu {
+            height: 100%;
+            padding: 10px 0;
+
+            .akougnon.active .blank {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 4px;
+                    height: 100%;
+                    background: $main;
+                    left: 0;
+                }
+            }
+
+            .menu-item {
+                margin: 0;
+                padding: 15px 5px 15px 15px;
+
+                &.blank {
+                    @include df_aic_jcsb;
+                }
+
+                a {
+                    color: white !important;
+                }
+
+                &:hover {
+                    background: rgba(64, 71, 100, 0.842);
+                }
+
+                &.has-submenu {
+                    padding: 0;
+
+                    .menu-item {
+                        @include df_aic_jcsb;
+
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .submenu {
+                    a {
+                        color: white !important;
+                        opacity: 0.6;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                    }
+
+                    .submenu-item {
+                        padding: 15px 0 5px 50px;
+
+                        a {
+                            color: white !important;
+                            opacity: 0.6;
+                            font-size: 14px;
+                            padding: 5px 0;
+                        }
+
+                        &:hover {
+                            background: rgba(82, 90, 121, 0.10);
+                        }
+                    }
+                }
+            }
+
+            .has-submenu>.submenu {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.5s ease-out;
+            }
+
+            .has-submenu.open>.submenu {
+                max-height: 300px;
+            }
+        }
+    }
+
+
+}

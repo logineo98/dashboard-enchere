@@ -1,0 +1,36 @@
+@mixin df_aic_jcc() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin df_aic_jcsb() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin df_aic_jcsa() {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin df_aic_jcfs() {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin df_aic_jcfe() {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+//column
+@mixin dfc_aic_jcc() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
