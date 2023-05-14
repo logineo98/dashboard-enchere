@@ -92,7 +92,6 @@ const EditionArticles = () => {
         inputs.hostID = host?._id
         inputs.categories = categories.map(categorie => categorie.value)
         inputs.expiration_time = new Date(date).toISOString()
-        inputs.enchere_type = host?.vip ? inputs.enchere_type : "public"
         inputs.enchere_status = host?.vip ? "published" : "pending"
         inputs.files = files
         inputs.delivery_options = { teliman: deliveryType.teliman, own: deliveryType.own, deliveryPrice: deliveryType.cost ? (delivery.deliveryPrice && delivery.deliveryPrice !== "") ? deleteSeparator(delivery.deliveryPrice) : 0 : 0 }

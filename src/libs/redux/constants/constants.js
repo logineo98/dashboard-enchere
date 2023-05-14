@@ -5,12 +5,12 @@
 // export const api = "http://192.168.1.102:5000"
 // export const api_public = "http://192.168.1.102:5000/api/public"
 
-// export const api = "http://127.0.0.1:5000"
-// export const api_public = "http://127.0.0.1:5000/api/public"
+export const api = "http://127.0.0.1:5000"
+export const api_public = "http://127.0.0.1:5000/api/public"
 
-export const api = "https://api-enchere.adaptable.app"
-export const api_public = "https://api-enchere.adaptable.app/api/public"
-export const vitepay_api = "https://api-enchere.adaptable.app/api/vitepay/callback"
+// export const api = "https://api-enchere.adaptable.app"
+// export const api_public = "https://api-enchere.adaptable.app/api/public"
+// export const vitepay_api = "https://api-enchere.adaptable.app/api/vitepay/callback"
 
 
 export const _user_loading = "_user_loading";

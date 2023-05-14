@@ -132,8 +132,10 @@ const ClientsPrives = () => {
             const townMatches = user?.town?.trim().toLowerCase().includes(searchString)
             const phoneMatches = user?.phone?.toString().trim().toLowerCase().includes(searchString)
             const nameMatches = user?.name?.trim().toLowerCase().includes(searchString)
+            const membre = user?.vip && "vip".includes(searchString)
+            const membre2 = !user?.vip && "particulier".includes(searchString)
 
-            return emailMatches || townMatches || phoneMatches || nameMatches
+            return emailMatches || townMatches || phoneMatches || nameMatches || membre || membre2
         })
 
         setSearch(e.target.value);
@@ -146,7 +148,7 @@ const ClientsPrives = () => {
     return (
         <div>
             <Card>
-                <PageTitle title={"Liste des clients"} linked={true} link={"/clients/nouveau-client"} />
+                <PageTitle hideExporte={true} title={"Liste des clients"} linked={true} link={"/clients/nouveau-client"} />
                 <PageTabs tabsItems={tabsItems} activeTab={activeTab} setActiveTab={setActiveTab} />
                 <PageTableHeader dropdownItems={dropdownItems} activeTab={activeTab} dropDown={dropDown} setDropDown={setDropDown} handleApply={handleApply} handleFilter={handleFilter} search={search} />
                 <Table column={column} datas={filtered} setRows={setRows} />

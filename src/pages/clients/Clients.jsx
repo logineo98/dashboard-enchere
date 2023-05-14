@@ -159,8 +159,10 @@ const Clients = () => {
             const townMatches = user?.town?.trim().toLowerCase().includes(searchString)
             const phoneMatches = user?.phone?.toString().trim().toLowerCase().includes(searchString)
             const nameMatches = user?.name?.trim().toLowerCase().includes(searchString)
+            const membre = user?.vip && "vip".includes(searchString)
+            const membre2 = !user?.vip && "particulier".includes(searchString)
 
-            return emailMatches || townMatches || phoneMatches || nameMatches
+            return emailMatches || townMatches || phoneMatches || nameMatches || membre || membre2
         })
 
         setSearch(e.target.value);

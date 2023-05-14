@@ -58,7 +58,6 @@ const Login = () => {
     }
 
 
-
     useEffect(() => {
         if (validation.username !== "") toast.error(validation.username, { position: "top-right" })
         if (validation.password !== "") toast.error(validation.password, { position: "top-right" })

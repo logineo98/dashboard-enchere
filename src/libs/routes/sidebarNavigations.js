@@ -13,7 +13,7 @@ const navigations = [
         to: "/articles",
         icon: "ti ti-pin-alt",
         subMenu: [
-            { name: "Toutes les articles", to: "/articles", },
+            { name: "Tous les articles", to: "/articles", },
             { name: "Nouvel article", to: "/articles/nouvel-article" },
             { name: "Articles publics", to: "/articles/articles-publics", },
             { name: "Articles privées", to: "/articles/articles-prives", },

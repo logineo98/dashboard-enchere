@@ -38,6 +38,7 @@ export const checking = () => async (dispatch) => {
     }
 }
 
+
 export const auth = () => async (dispatch) => {
     try {
         dispatch(isLoading())
